@@ -1,4 +1,14 @@
 import tkinter as tk
+import cv2
+
+class Application2(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.pack()
+        #self.create_widgets()
+        
+    #def create_widgets(self):
+        #imagem da camera
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -7,11 +17,6 @@ class Application(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        # self.hi_there = tk.Button(self)
-        # self.hi_there["text"] = "Hello World\n(click me)"
-        # self.hi_there["command"] = self.say_hi
-        # self.hi_there.pack(side="top")
-        
         #Botão direita
         self.right = tk.Button(self)
         self.right["text"] = "Direita\n"
@@ -35,9 +40,6 @@ class Application(tk.Frame):
         self.up["text"] = "Cima\n"
         self.up["command"] = self.say_up
         self.up.pack(side="top")
-
-    # def say_hi(self):
-        # print("hi there, everyone!")
         
     def say_right(self):
         print ("Direita!")
@@ -53,4 +55,6 @@ class Application(tk.Frame):
 
 root = tk.Tk()
 app = Application(master=root)
+app2 = Application2(master=root)
 app.mainloop()
+app2.mainloop()
